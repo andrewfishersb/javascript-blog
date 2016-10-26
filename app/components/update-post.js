@@ -14,10 +14,11 @@ export default Ember.Component.extend({
       category: this.get('category'),
       tag: this.get('tag'),
       time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
-      epochTime: moment().unix()
+      timestamp:moment().unix()
       };
       this.set('updateBlogForm', false);
       this.sendAction('updatePost', post, params);
+      console.log(moment().unix());
       }
 
   }

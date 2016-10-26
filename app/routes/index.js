@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   // categoryType: 'all',
   //add params as parameter if single post?
   model(){
-    return this.store.query('post', {orderBy:'epochTime'});
+    return this.store.query('post', {orderBy:'timestamp'});
   },
   actions:{
 

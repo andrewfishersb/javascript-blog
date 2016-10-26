@@ -1,12 +1,12 @@
-{{#if blogForm}}
+{{#if updateBlogForm}}
   <form>
     {{input class="form-control" value=title id='title' placeholder="Enter a title..."}}
     {{input class="form-control" value=user id='user' placeholder="Enter username..."}}
     {{textarea class="form-control" value=content id='content' placeholder="Enter content..."}}
     {{input class="form-control" value=category id='category' placeholder="Enter a category..."}}
     {{input class="form-control" value=tag id='tag' placeholder="Enter a tag..."}}
-    <button {{action 'savePost'}}>Submit</button>
+    <button {{action 'updatePost' post}}>Submit</button>
   </form>
 {{else}}
-  <button {{action "postBlogShown"}}>Add new blog post</button>
+  <button {{action "updateBlogShown"}}>Update Post</button>
 {{/if}}

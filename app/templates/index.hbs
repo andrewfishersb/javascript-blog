@@ -1,5 +1,6 @@
 {{#each model as |blog|}}
   {{blog-list blog=blog }}
+  {{update-post post=blog updatePost="updatePost"}}
 {{/each}}
 
 {{new-post savePost2="savePost3"}}

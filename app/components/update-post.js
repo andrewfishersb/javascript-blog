@@ -13,8 +13,9 @@ export default Ember.Component.extend({
       content: this.get('content'),
       category: this.get('category'),
       tag: this.get('tag'),
-      time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
       timestamp:moment().unix()
+      // time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
+
       };
       this.set('updateBlogForm', false);
       this.sendAction('updatePost', post, params);

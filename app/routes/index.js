@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // categoryType: 'all',
-  //add params as parameter if single post?
+
   model(){
     return this.store.query('post', {orderBy:'timestamp'});
   },

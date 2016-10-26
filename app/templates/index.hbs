@@ -1,1 +1,5 @@
-{{outlet}}
+{{#each model as |blog|}}
+  {{blog-list blog=blog }}
+{{/each}}
+
+{{new-post savePost2="savePost3"}}

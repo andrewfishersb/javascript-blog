@@ -13,7 +13,8 @@ export default Ember.Component.extend({
       content: this.get('content'),
       category: this.get('category'),
       tag: this.get('tag'),
-      time: moment().format("dddd, MMMM Do YYYY, h:mm a")
+      time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
+      epochTime: moment().unix()
       };
       this.set('updateBlogForm', false);
       this.sendAction('updatePost', post, params);

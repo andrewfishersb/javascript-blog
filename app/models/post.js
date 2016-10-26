@@ -5,5 +5,6 @@ export default DS.Model.extend({
   content: DS.attr(),
   user: DS.attr(),
   category: DS.attr(),
-  tag: DS.attr()
+  tag: DS.attr(),
+  time: DS.attr()
 });

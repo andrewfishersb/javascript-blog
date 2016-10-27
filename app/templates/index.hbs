@@ -1,5 +1,14 @@
-{{#each model as |blog|}}
-  {{blog-list blog=blog }}
-{{/each}}
+  <div class="row">
+    {{#each model as |blog|}}
+
+      <div class="col-sm-6 post">
+        {{blog-list blog=blog }}
+      </div>
+
+    {{/each}}
+  </div>
+
+
+
 
 {{new-post savePost2="savePost3"}}

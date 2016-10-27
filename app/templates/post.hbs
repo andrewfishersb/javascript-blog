@@ -1,7 +1,2 @@
-<h2>{{model.title}}</h2>
-
-{{post-detail post=model destroyPost="destroyPost" destroyComment="destroyComment" updateComment="updateComment"}}
-
-{{update-post post=model updatePost="updatePost"}}
-
-{{new-comment saveComment="saveComment" post=model}}
+  <h2>{{model.title}}</h2>
+  {{post-detail post=model saveComment="saveComment" updatePost="updatePost" destroyPost="destroyPost" destroyComment="destroyComment" updateComment="updateComment"}}

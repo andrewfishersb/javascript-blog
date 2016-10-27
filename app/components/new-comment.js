@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         post: this.get('post')
       };
+
       this.set('addNewComment', false);
       this.sendAction('saveComment',params);
     }

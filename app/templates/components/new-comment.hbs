@@ -4,15 +4,15 @@
     <form>
       <div class="form-group">
         <label for="user">User</label>
-        {{input value=user id="user"}}
+        {{input class="form-control" value=user id="user"}}
       </div>
       <div class="form-group">
         <label for="content">Comment</label>
-        {{textarea value=content id="content"}}
+        {{textarea class="form-control" value=content id="content"}}
       </div>
-      <button {{action 'saveComment'}}>Save</button>
+      <button class="btn btn-success"{{action 'saveComment'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'commentFormShow'}}>New Comment</button>
+  <button class="btn btn-primary" {{action 'commentFormShow'}}>New Comment</button>
 {{/if}}

@@ -4,8 +4,8 @@ export default Ember.Component.extend({
   blogForm : false,
   actions:{
     savePost(){
-      if(!this.get('title')&&!this.get('user')&&!this.get('content')){
-        alert("Please Enter In a title, user and content");
+      if(!this.get('title')){
+        alert("Please enter in a title");
       }else{
         var params = {
           title: this.get('title') ? this.get('title'):"",
@@ -16,6 +16,11 @@ export default Ember.Component.extend({
           time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
           timestamp:moment().unix()
         };
+        this.set("title","")
+        this.set("user","")
+        this.set("content","")
+        this.set("category","")
+        this.set("tag","")
         this.set("blogForm",false);
         this.sendAction("savePost2",params);
       }
@@ -23,6 +28,9 @@ export default Ember.Component.extend({
     },
     postBlogShown(){
       this.set('blogForm',true);
+    },
+    postBlogHide(){
+      this.set('blogForm', false);
     }
   }
 });

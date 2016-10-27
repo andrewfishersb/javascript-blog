@@ -1,12 +1,18 @@
 {{#if updateBlogForm}}
   <form>
+    <label></label>
+    <label>Title</label>
     {{input class="form-control" value=title id='title' placeholder="Enter a title..."}}
+    <label>Author</label>
     {{input class="form-control" value=user id='user' placeholder="Enter username..."}}
-    {{textarea class="form-control" value=content id='content' placeholder="Enter content..."}}
+    <label>Post</label>
+    {{textarea rows="4" class="form-control" value=content id='content' placeholder="Enter content..."}}
+    <label>Category</label>
     {{input class="form-control" value=category id='category' placeholder="Enter a category..."}}
+    <label>Tag</label>
     {{input class="form-control" value=tag id='tag' placeholder="Enter a tag..."}}
-    <button {{action 'updatePost' post}}>Submit</button>
+    <button class="btn btn-success" {{action 'updatePost' post}}>Submit</button>
   </form>
 {{else}}
-  <button {{action "updateBlogShown"}}>Update Post</button>
+  <button {{action "updateBlogShown"}} class="btn btn-info">Update Post</button>
 {{/if}}

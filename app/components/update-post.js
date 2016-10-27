@@ -16,6 +16,11 @@ export default Ember.Component.extend({
       timestamp:moment().unix()
 
       };
+      this.set('title',"");
+      this.set('user',"");
+      this.set('content',"");
+      this.set('category',"");
+      this.set('tag',"");
       this.set('updateBlogForm', false);
       this.sendAction('updatePost', post, params);
       }

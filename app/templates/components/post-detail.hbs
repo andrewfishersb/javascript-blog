@@ -1,13 +1,20 @@
-<h3>{{post.user}}</h3>
-<h3>{{post.content}}</h3>
-<h3>{{post.category}}</h3>
-<h3>{{post.tag}}</h3>
-<h3>{{post.time}}</h3>
-
-<button {{action 'delete' post}}>Delete</button>
-
-
-<h2>Comments (be nice)</h2>
-{{#each post.comments as |comment|}}
-  {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
-{{/each}}
+<div class="row">
+  <div class="col-sm-7">
+    <div class="blog">
+      <h4>Author: {{post.user}}</h4>
+      <h4>{{post.content}}</h4>
+      <h4>Category: {{post.category}}</h4>
+      <h4>Tags: {{post.tag}}</h4>
+      <h4>{{post.time}}</h4>
+    </div>
+    {{update-post post=post updatePost="updatePost"}}
+    <button class="btn btn-danger" {{action 'delete' post}}>Delete</button>
+  </div>
+  <div class="col-sm-5">
+    <h2>Comments (be nice)</h2>
+    {{#each post.comments as |comment|}}
+      {{comment-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
+    {{/each}}
+    {{new-comment saveComment="saveComment" post=post}}
+  </div>
+</div>

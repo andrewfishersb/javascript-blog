@@ -10,6 +10,7 @@ export default Ember.Component.extend({
       var params = {
         content: this.get('content')
       };
+      this.set('content',"");
       this.set("updateCommentForm",false);
       this.sendAction("updateComment",comment,params);
     }

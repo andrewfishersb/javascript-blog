@@ -1,0 +1,44 @@
+h1, h2, h3, h4, p, label{
+  color: white;
+  text-shadow: 2px 2px 2px  black;
+}
+
+body{
+  background-image: url("http://www.themichelicenter.com/wp-content/uploads/2016/03/soccer-online.jpg") ;
+  background-repeat: no-repeat;
+}
+.post{
+  border-style:hidden;
+  margin-top: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+.blog{
+  background-color: rgba(36, 143, 36,.9);
+  padding: 10px ;
+  border-radius: 15px;
+}
+.post:hover{
+  background-color: rgba(46, 184, 46,.5);
+}
+.jumbotron{
+  background-color: rgba(46, 184, 46,.7);
+
+}
+ .blog.comment{
+  text-align: center;
+}
+.btn {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.form-control {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.newPostButtonShow {
+  text-align: center;
+  margin: 0px auto;
+}

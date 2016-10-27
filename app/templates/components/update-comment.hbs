@@ -1,8 +1,8 @@
 {{#if updateCommentForm}}
   <form>
     {{textarea class="form-control" value=content id='content' placeholder="Enter comment..."}}
-    <button {{action 'updateComment' comment}}>Submit</button>
+    <button class="btn btn-primary" {{action 'updateComment' comment}}>Submit</button>
   </form>
 {{else}}
-  <button {{action "updateCommentShown"}}>Update Comment</button>
+  <button class="btn btn-info" {{action "updateCommentShown"}}>Update Comment</button>
 {{/if}}

@@ -1,7 +1,5 @@
 {{#each model as |blog|}}
   {{blog-list blog=blog }}
-  {{update-post post=blog updatePost="updatePost"}}
-  <button {{action 'deleteEntry' blog}} class="btn btn-danger">Delete</button>
 {{/each}}
 
 {{new-post savePost2="savePost3"}}

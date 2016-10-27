@@ -19,7 +19,6 @@ export default Ember.Component.extend({
       };
       this.set('updateBlogForm', false);
       this.sendAction('updatePost', post, params);
-      console.log(moment().unix());
       }
 
   }

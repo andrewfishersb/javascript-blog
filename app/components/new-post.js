@@ -2,11 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   blogForm : false,
-  // convertedTime: null,
   actions:{
     savePost(){
       if(!this.get('title')&&!this.get('user')&&!this.get('content')){
-        alert("Please Enter In a title, user and content")
+        alert("Please Enter In a title, user and content");
       }else{
         var params = {
           title: this.get('title') ? this.get('title'):"",
@@ -17,7 +16,6 @@ export default Ember.Component.extend({
           time: moment().format("dddd, MMMM Do YYYY, h:mm a"),
           timestamp:moment().unix()
         };
-        // convertedTime = moment(params.time*1000).format("dddd, MMMM Do YYYY, h:mm a");
         this.set("blogForm",false);
         this.sendAction("savePost2",params);
       }
@@ -28,4 +26,3 @@ export default Ember.Component.extend({
     }
   }
 });
-//
